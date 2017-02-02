@@ -13,7 +13,7 @@ You need the following to be installed:
 
 ### How it works ###
 
-When you start this programm with:
+When you start this program with:
 
     python py-unoconv-batch-recursive
 
