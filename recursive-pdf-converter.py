@@ -51,10 +51,10 @@ def convertThis(indir, outdir, extensions):
         for filename in files:
             path = root + '/' + filename
             cmd = 'unoconv -f pdf --output="' + path + '.pdf"' + ' "' + path + '"'
-            print cmd
+            print '--- Converting: ' + path
             os.system(cmd)
         else:
-            print "--- No converted files found in this folder"
+            print "--- No files for conversion found in this folder"
                
      
      os.system('kill -15 %-')
@@ -62,3 +62,4 @@ def convertThis(indir, outdir, extensions):
 
 if __name__ == "__main__":
    main(sys.argv[1:])
+
