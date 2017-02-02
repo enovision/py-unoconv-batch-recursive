@@ -1,6 +1,7 @@
 # py-unoconv-batch-recursive
 
-Working but not clean python script for converting files to PDF recursively
+Working but not very well written python script for converting files to PDF recursively. I have used it succesfully on
+a complex folder structure of more than 5000 files on Linux Ubuntu.
 
 ### Synopsis ###
 This is my very first Python script, but it is working. You can batch convert files with `unoconv` to PDF format.
