@@ -22,7 +22,7 @@ without any parameters it will use the folder where it resides as the base folde
 
 You can however use:
 
-    python /path/to/script/py-unoconv-batch-resursive --in="/path/to/documents"
+    python /path/to/script/py-unoconv-batch-resursive.py --in="/path/to/documents"
     
 ### Default extensions ###
 doc,docx,rtf,txt,otf
