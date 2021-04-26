@@ -17,7 +17,7 @@ def main(argv):
    try:
       opts, args = getopt.getopt(argv,"ioer",["in=","out=", "ext=", "recursive="])
    except getopt.GetoptError:
-      print 'not good'
+      print('not good')
       sys.exit(2)
    for opt, arg in opts:
       if opt in ("-i", "--in"):
@@ -31,17 +31,17 @@ def main(argv):
 
    convertThis(indir, outdir, extensions)
 
-   print '--- Done'
+   print('--- Done')
 
 
 def convertThis(indir, outdir, extensions):
 
-     print '--- Starting unoconv listener (just wait 20 seconds)'
+     print('--- Starting unoconv listener (just wait 20 seconds)')
      os.system('unoconv --listener & sleep 20')
-     print '--- OK, let\'s go'
+     print('--- OK, let\'s go')
      
      for root, subdirs, files in os.walk(indir):
-        print root	
+        print(root)
         
         os.chdir(root)  
         
@@ -51,10 +51,10 @@ def convertThis(indir, outdir, extensions):
         for filename in files:
             path = root + '/' + filename
             cmd = 'unoconv -f pdf --output="' + path + '.pdf"' + ' "' + path + '"'
-            print '--- Converting: ' + path
+            print('--- Converting: ' + path)
             os.system(cmd)
         else:
-            print "--- No files for conversion found in this folder"
+            print("--- No files for conversion found in this folder")
                
      
      os.system('kill -15 %-')
@@ -62,4 +62,3 @@ def convertThis(indir, outdir, extensions):
 
 if __name__ == "__main__":
    main(sys.argv[1:])
-
